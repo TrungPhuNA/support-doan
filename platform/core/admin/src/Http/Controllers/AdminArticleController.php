@@ -29,10 +29,10 @@ class AdminArticleController extends AdminBaseController
 	public function create()
 	{
 		$menus  = Menu::all();
-		$tags   = Tag::all();
-		$tagOld = [];
+		// $tags   = Tag::all();
+		// $tagOld = [];
 
-		return view('admin::article.create', compact('menus', 'tags', 'tagOld'));
+		return view('admin::article.create', compact('menus'));
 	}
 
 	public function store(AdminRequestArticle $request)
@@ -57,11 +57,11 @@ class AdminArticleController extends AdminBaseController
 		}
 
 		$id = Article::insertGetId($data);
-		if ($id)
-		{
-			if ($request->tags)
-				$this->syncTags($request->tags, $id);
-		}
+		// if ($id)
+		// {
+		// 	if ($request->tags)
+		// 		$this->syncTags($request->tags, $id);
+		// }
 
 //		\OneSignal::sendNotificationToAll(
 //			$request->a_name,
@@ -81,16 +81,16 @@ class AdminArticleController extends AdminBaseController
 	{
 		$article = Article::find($id);
 		$menus   = Menu::all();
-		$tags    = Tag::all();
+		// $tags    = Tag::all();
 
-		$tagOld = \DB::table('articles_tags')
-			->where('at_article_id', $id)
-			->pluck('at_tag_id')
-			->toArray();
+		// $tagOld = \DB::table('articles_tags')
+		// 	->where('at_article_id', $id)
+		// 	->pluck('at_tag_id')
+		// 	->toArray();
 
 		if (empty($tagOld)) $tagOld = [];
 
-		return view('admin::article.update', compact('menus', 'article', 'tags', 'tagOld'));
+		return view('admin::article.update', compact('menus', 'article'));
 	}
 
 	public function update(AdminRequestArticle $request, $id)
@@ -119,8 +119,8 @@ class AdminArticleController extends AdminBaseController
 		}
 
 		$article->update($data);
-		if ($request->tags)
-			$this->syncTags($request->tags, $id);
+		// if ($request->tags)
+		// 	$this->syncTags($request->tags, $id);
 
 //		RenderUrlSeoBlogServices::renderUrlBLog($article->a_slug.'-'.SeoBlog::SLUG_ARTICLE.'-'.$id, SeoBlog::TYPE_ARTICLE, $id);
 
