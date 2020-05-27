@@ -1,0 +1,26 @@
+{
+    "name": "core/user",
+    "description": "Setting User",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Core\\User\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "TrungPhuNA",
+            "email": "phupt.humg.94@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Core\\User\\UserServiceProvider"
+            ]
+        }
+    }
+}

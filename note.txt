@@ -1,0 +1,32 @@
+
++ Đăng nhập admin
+    http://tailieu.phupt.net/admin-auth/login
+
++ Tài khoản
+    + ID : phupt.admin94@gmail.com
+    + Pas: 123456789
+
++ Link nhập dữ liệu
+    + http://tailieu.phupt.net/api-admin/document/create
+
+* Đối với tài liệu pdf
+    + Chỉ cần up 1 file bình thường
+        + Tự động tạo thumbar
+        + Tự động đếm số page
+        + Load từng page khi preview ( 20%)
+* Đối với word
+    + Update 1 file gốc
+    + Update 1 file preview ( nhưng file này người update sẽ convert về pdf )
+        + Tiến trình sẽ quay về giống pdf
+
+* convert
+    - unoconv -f pdf XXYY.docx
+    - sudo unoconv --listener
+    - [-- ID] 633
+
+    ssh -l root 123.31.41.38
+    1Sonline@2019@
+
+
+
+http://tailieu.trungphu/recharge/process-success?error_code=00&token=43198937-3ffdbe323d73b6c4f899db82b5ba1a32&order_code=macode_1589516952&order_id=43198937

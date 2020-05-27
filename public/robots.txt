@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /ajax
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: LinkedInBot
+disallow: /
+
+User-agent: linkdexbot
+disallow: /
+
+User-agent: AhrefsBot
+disallow: /
+
+User-agent: Yandex
+disallow: /
+
+User-agent: MauiBot
+disallow: /

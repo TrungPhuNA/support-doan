@@ -1,0 +1,314 @@
+#footer {
+    background-image: linear-gradient(#232f3e, #384351);
+    padding: 25px 0 20px 0;
+    position: relative;
+    .footer {
+        display: flex;
+
+        &__left {
+            flex: 1;
+
+            .top {
+                justify-content: space-between;
+                margin-bottom: 15px;
+                display: flex;
+                .item {
+                    ul {
+                        li {
+                            margin-bottom: 5px;
+
+                            a {
+                                color: white;
+                                font-size: 13px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .info-company {
+                padding: 0 10px;
+                p {
+                    color: rgb(125, 132, 146);
+                    line-height: 24px;
+                    a {
+                        font-weight: bold;
+                        font-size: 15px;
+                        color: rgb(209, 211, 214);
+                    }
+                }
+            }
+
+            .bot {
+                display: flex;
+
+                > * {
+                    margin-right: 25px;
+                }
+
+                .social {
+                    ul {
+                        li {
+                            color: #7c4720;
+                            display: inline-block;
+                            font-size: 20px;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    a {
+                        width: 30px;
+                        height: 30px;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 30px;
+                        border-radius: 50%;
+                        background: white;
+                        margin-right: 15px;
+                    }
+
+                    a.fa-youtube {
+                        background: #bb0000;
+                        color: white;
+                    }
+
+                    a.fa-facebook-official {
+                        background: #3B5998;
+                        color: white;
+                    }
+
+                    a.fa-twitter {
+                        background: #55ACEE;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        &__mid {
+            margin: 0 40px;
+            width: 284px;
+
+            .image {
+                height: 200px;
+                position: relative;
+
+                .search-location {
+                    background: rgba(204, 0, 0, .74);
+                    bottom: 25px;
+                    color: #fff;
+                    font-size: 15px;
+                    left: 0;
+                    padding: 10px 0;
+                    pointer-events: none;
+                    position: absolute;
+                    text-align: center;
+                    width: 100%;
+                    z-index: 5;
+                }
+            }
+
+            .more {
+                color: #fff;
+                display: block;
+                margin-top: 8px;
+                text-align: center;
+            }
+        }
+
+        &__right {
+            width: 340px;
+        }
+    }
+
+    .title {
+        color: #ffae00;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+}
+
+#bottom {
+    background: #140b04;
+    padding: 25px 0 35px 0;
+
+    .wrapper {
+        align-items: center;
+        display: flex;
+
+        .logo {
+            margin-right: 30px;
+            width: 275px;
+
+            img {
+                display: block;
+                margin: auto;
+                max-width: 100%;
+            }
+        }
+
+        .right {
+            color: #b6a395;
+            flex: 1;
+            text-align: center;
+
+            .title {
+                color: #dca227;
+                display: block;
+                margin-bottom: 5px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #footer {
+        //display: none;
+        padding: 5px;
+        .title {
+            margin-bottom: 0;
+        }
+        .footer {
+            flex-direction: column;
+            &__left {
+                .top {
+                    text-align: center;
+                    flex-direction: column;
+                    .item {
+                        margin-bottom: 10px;
+                    }
+                    .item-nav {
+                        flex-wrap: nowrap;
+                        overflow-x: scroll;
+                        white-space: nowrap;
+                        margin: 10px 0;
+                        li {
+                            display: inline;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                .bot {
+                    display: none;
+                }
+            }
+
+            &__right {
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    #bottom {
+        .wrapper {
+            padding: 0 10px;
+            flex-direction: column;
+
+            .logo {
+                margin-right: 0;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: white;
+    box-shadow: -1px 0px 22px 2px #f2f2f2;
+    color: #333;
+    border: 1px solid #1c9dff;
+    text-align: center;
+    border-radius: 6px;
+    z-index: 999;
+    margin-left: 0;
+    position: fixed;
+    bottom: 89px;
+    left: 10%;
+    height: 85px;
+    padding: 10px;
+}
+
+.content_popup
+{
+    display: flex;
+}
+.popup .popuptext img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.popup .popuptext span {
+    margin-left: 10px;
+    text-align: justify;
+    font-size: 13px;
+}
+
+.popup .popuptext i {
+    cursor: pointer;
+    top: -13px;
+    position: absolute;
+    right: -15px;
+    height: 30px;
+    width: 30px;
+    background: #e91e63;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 30px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 2;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:2 ;}
+}
+
+// customer chat facebook
+//.fb_dialog {
+//    right: 47px !important;
+//}
+//#facebook svg {
+//    width: 34px !important;
+//    height: 34px !important;
+//}
