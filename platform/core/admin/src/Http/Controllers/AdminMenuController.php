@@ -25,7 +25,8 @@ class AdminMenuController extends Controller
 
     public function create()
     {
-        return view('admin::menu.create');
+		$menus = Menu::all();
+        return view('admin::menu.create', compact('menus'));
     }
 
     public function store(AdminRequestMenu $request)
@@ -41,7 +42,8 @@ class AdminMenuController extends Controller
     public function edit($id)
     {
         $menu = Menu::find($id);
-        return view('admin::menu.update', compact('menu'));
+		$menus = Menu::all();
+        return view('admin::menu.update', compact('menu','menus'));
     }
 
     public function update(AdminRequestMenu $request, $id)

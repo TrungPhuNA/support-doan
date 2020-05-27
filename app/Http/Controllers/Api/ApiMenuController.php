@@ -15,7 +15,10 @@ class ApiMenuController extends Controller
      */
     public function index()
     {
-        return  Menu::all();
+        return  Menu::with('children')
+			->where('mn_parent_id',0)
+			->get();
+
     }
 
     /**

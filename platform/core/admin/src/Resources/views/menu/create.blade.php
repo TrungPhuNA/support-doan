@@ -26,6 +26,17 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="col-sm-8">
+                            <div class="form-group ">
+                                <label for="name">Parent <span class="text-danger">(*)</span></label>
+                                <select name="mn_parent_id" id="" class="form-control">
+                                    <option value="0">ROOT</option>
+                                    @foreach($menus as $item)
+                                        <option value="{{ $item->id }}">{{ $item->mn_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         <div class="col-sm-4">
                             
                         </div>

@@ -10,4 +10,9 @@ class Menu extends Model
     const HOT = 1;
 
     const STATUS_ACTIVE = 1;
+
+	public function children()
+	{
+		return $this->hasMany(self::class,'mn_parent_id','id');
+	}
 }

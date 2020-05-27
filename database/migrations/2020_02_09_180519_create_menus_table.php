@@ -19,6 +19,7 @@ class CreateMenusTable extends Migration
             $table->string('mn_slug')->unique();
             $table->string('mn_avatar')->nullable();
             $table->string('mn_banner')->nullable();
+            $table->integer('mn_parent_id')->default(0);
             $table->string('mn_description')->nullable();
             $table->tinyInteger('mn_hot')->default(0);
             $table->tinyInteger('mn_status')->default(1);

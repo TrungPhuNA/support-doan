@@ -19,8 +19,9 @@ class ApiArticleController extends Controller
     	return  $articles;
     }
 
-    public function getArticleByMenuId($id)
+    public function getArticleByMenuId(Request $request,$id)
 	{
+		\Log::info($request->all());
 		$articles = Article::with('menu')
 			->where('a_menu_id', $id)
 			->paginate(10);
