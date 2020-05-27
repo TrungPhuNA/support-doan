@@ -51,7 +51,7 @@
                         <span class="text-danger">{{ $errors->first('a_menu_id') }}</span>
                     @endif
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="tag">Tag</label>
                     <select name="tags[]" class="form-control js-select2" multiple="">
                         <option value="">__Click__</option>
@@ -60,7 +60,7 @@
                                 {{ $tag->t_name }}</option>
                         @endforeach
                     </select>
-                </div>
+                </div> --}}
             </div>
         </div>
         
