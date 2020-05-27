@@ -1,0 +1,13 @@
+@import "./../../bases/common";
+//Plugins
+//Components global
+@import "./../../icon/font-awesome/scss/font-awesome";
+@import "./../../components/breadcrumb";
+@import "./../../components/header";
+@import "./../../components/menu_main";
+@import "./../../components/sidebar_mb";
+
+@import "./../../components/sidebar_blog";
+@import "./../../components/blog_main";
+@import "include/inc_post_hot";
+@import "include/inc_blog_item";

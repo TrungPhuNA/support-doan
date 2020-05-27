@@ -1,0 +1,51 @@
+h1 {
+    color: #2196F3;
+}
+.content {
+    display: flex;
+    &-avatar {
+        a {
+            margin-right: 15px;
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+    &-text {
+        background-color: white;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+.affiliate {
+    padding: 10px;
+    background: white;
+    margin-top: 10px;
+    p {
+        &:last-child{
+            color: red;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        flex-direction: column;
+        &-avatar {
+            a {
+                margin-right: 0;
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        &-text {
+
+        }
+    }
+}

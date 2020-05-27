@@ -1,0 +1,13 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Đây là bản mô tả cách sử dụng API",
+        "version": "1.0.0",
+        "title": "Docs API Đồ Án Tốt Nghiệp",
+        "contact": {
+            "email": "phupt.humg.94@gmail.com"
+        }
+    },
+    "host": "http://doantotnghiep.abc/",
+    "basePath": "/v1"
+}

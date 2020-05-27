@@ -1,0 +1,19 @@
+@import "./../../icon/font-awesome/scss/font-awesome";
+
+
+//Components global
+@import "~jquery-modal";
+@import "./../../bases/common";
+@import "./../../bases/font-family";
+
+//Components global
+@import "./../../components/breadcrumb";
+@import "./../../components/header";
+@import "./../../components/menu_main";
+@import "./../../components/auth";
+@import "~toastr";
+
+@import "./../../components/sidebar_mb";
+@import "./../../components/footer";
+
+

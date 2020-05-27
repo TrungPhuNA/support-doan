@@ -1,0 +1,398 @@
+openapi: 3.0.0
+info:
+  title: API 123Job
+  description: Đây là bản mô tả API 123Job nha
+  version: 1.0
+servers:
+  - url: http://123job.abc/api
+    description: Đây là API local
+  - url: https://dev.123job.vn/api
+    description: Đây là API server test
+  - url: https://123job.vn/api
+    description: Đây là API server main
+  - url: http://192.168.31.97/api
+    description: Đây là API server main
+paths:
+  /companies:
+    $ref: paths/company/company.yaml
+  /companies/random:
+    $ref: paths/company/company_random.yaml
+  /companies/{slug}:
+    $ref: paths/company/company_mixes.yaml
+  /companies/{slug}/location:
+    $ref: paths/company/company_location.yaml
+  /companies/{slug}/job:
+    $ref: paths/company/job_data.yaml
+  /companies/{slug}/department:
+    $ref: paths/company/department.yaml
+  /companies/{slug}/department/job-title:
+    $ref: paths/company/department_job_title.yaml
+  /companies/{slug}/qa-question:
+    $ref: paths/company/rv_qa_question.yaml
+  /companies/{slug}/rv-tag:
+    $ref: paths/company/rv_tag.yaml
+  /companies/statistic/random:
+    $ref: paths/company/statistic_random.yaml
+
+
+  /job-employer/index:
+    $ref: paths/job_employer/job_employer_index.yaml
+  /job-employer/store:
+    $ref: paths/job_employer/job_employer_store.yaml
+  /job-employer/status:
+    $ref: paths/job_employer/job_employer_status.yaml
+  /job-employer/attribute:
+    $ref: paths/job_employer/job_employer_attribute.yaml
+  /job-employer/employer/{employer_id}/statistic:
+    $ref: paths/job_employer/job_employer_statistic.yaml
+  /job-employer/{id}/show:
+    $ref: paths/job_employer/job_employer_show.yaml
+  /job-employer/{id}/update:
+    $ref: paths/job_employer/job_employer_update.yaml
+
+  /apply-job/index:
+    $ref: paths/apply_job/apply_job_index.yaml
+  /apply-job/attribute:
+    $ref: paths/apply_job/apply_job_step.yaml
+  /apply-job/employer/{employer_id}/statistic:
+    $ref: paths/apply_job/apply_job_statistic.yaml
+  /apply-job/{id}/show:
+    $ref: paths/apply_job/apply_job_show.yaml
+  /apply-job/{id}/update:
+    $ref: paths/apply_job/apply_job_update.yaml
+  /apply-job/add-candidate:
+    $ref: paths/apply_job/apply_job_add_candidate.yaml
+
+  /apply-note/store:
+    $ref: paths/apply_note/apply_note_store.yaml
+  /apply-note/{id}/show:
+    $ref: paths/apply_note/apply_note_show.yaml
+  /apply-note/{id}/update:
+    $ref: paths/apply_note/apply_note_update.yaml
+
+  /candidate-info/store:
+    $ref: paths/candidate_info/candidate_info_store.yaml
+  /candidate-info/{id}/show:
+    $ref: paths/candidate_info/candidate_info_show.yaml
+  /candidate-info/{id}/update:
+    $ref: paths/candidate_info/candidate_info_update.yaml
+
+  /career/index:
+    $ref: paths/career/career_index.yaml
+  /location/index:
+    $ref: paths/location/location_index.yaml
+
+  /employer-info/index:
+    $ref: paths/employer_info/index.yaml
+  /employer-info/attribute:
+    $ref: paths/employer_info/attribute.yaml
+  /employer-info/{id}/show:
+    $ref: paths/employer_info/show.yaml
+  /employer-info/{id}/update:
+    $ref: paths/employer_info/update.yaml
+
+  /schedule-candidate/index:
+    $ref: paths/schedule_candidate/index.yaml
+  /schedule-candidate/attribute:
+    $ref: paths/schedule_candidate/attribute.yaml
+  /schedule-candidate/store:
+    $ref: paths/schedule_candidate/store.yaml
+  /schedule-candidate/{id}/show:
+    $ref: paths/schedule_candidate/show.yaml
+  /schedule-candidate/{id}/update:
+    $ref: paths/schedule_candidate/update.yaml
+components:
+  schemas:
+    Company_Mix:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      required:
+        - id
+        - name
+    Company_Location:
+      type: object
+      properties:
+        id:
+          type: integer
+        company_id:
+          type: integer
+        city_id:
+          type: integer
+        district_id:
+          type: integer
+        street_id:
+          type: integer
+        city:
+          type: string
+        district:
+          type: string
+        street:
+          type: string
+        address:
+          type: string
+        status:
+          type: integer
+        created_at:
+          type: string
+        updated_at:
+          type: string
+      required:
+        - id
+        - name
+    Job_Data:
+      type: object
+      properties:
+        job_title:
+          type: string
+        job_slug:
+          type: string
+        job_hash_slug:
+          type: string
+        job_address:
+          type: string
+        job_salary:
+          type: string
+        job_max_salary:
+          type: string
+        job_min_salary:
+          type: string
+        job_expiry_date:
+          type: string
+        created_at:
+          type: string
+        updated_at:
+          type: string
+      required:
+        - id
+        - name
+    Department:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        slug:
+          type: string
+        job_hit:
+          type: integer
+        status:
+          type: integer
+        created_at:
+          type: string
+        updated_at:
+          type: string
+      required:
+        - id
+        - name
+    DepartmentJobTitle:
+      type: object
+      properties:
+        id:
+          type: integer
+        company_id:
+          type: integer
+        department_id:
+          type: integer
+        job_attribute_id:
+          type: integer
+        title:
+          type: string
+        slug:
+          type: string
+        job_hit:
+          type: integer
+        status:
+          type: integer
+        created_at:
+          type: string
+        updated_at:
+          type: string
+      required:
+        - id
+        - name
+    QA_Question:
+      type: object
+      properties:
+        id:
+          type: integer
+        company_id:
+          type: integer
+        user_id:
+          type: integer
+        tag_id:
+          type: integer
+        question:
+          type: string
+        total_answer:
+          type: integer
+        view:
+          type: integer
+        top:
+          type: integer
+        status:
+          type: integer
+        device:
+          type: integer
+        month:
+          type: integer
+        year:
+          type: integer
+        answer_latest:
+          type: string
+        created_at:
+          type: string
+        updated_at:
+          type: string
+        replied_at:
+          type: string
+    Rv_Tag:
+      type: object
+      properties:
+        title:
+          type: string
+        slug:
+          type: string
+        parent_id:
+          type: integer
+        type:
+          type: integer
+        meta_title:
+          type: string
+        meta_description:
+          type: string
+        meta_keyword:
+          type: string
+        status:
+          type: integer
+      required:
+        - id
+        - name
+    Company_Random:
+      type: object
+      properties:
+        id:
+          type: integer
+        hash_slug:
+          type: string
+        name:
+          type: string
+        name_default:
+          type: string
+        slug:
+          type: string
+        hit_job:
+          type: integer
+        logo:
+          type: string
+        cpnStatistic:
+          type: array
+      required:
+        - id
+        - name
+    ApplyJob:
+      type: "object"
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        guest_id:
+          type: integer
+        employer_id:
+          type: integer
+        jde_id:
+          type: integer
+        jd_id:
+          type: integer
+        cv_id:
+          type: integer
+        type:
+          type: integer
+        status:
+          type: string
+        status_text:
+          type: string
+        status_interested:
+          type: integer
+        status_apply:
+          type: integer
+        note:
+          type: string
+        extend:
+          type: string
+        phone:
+          type: string
+        path_cv:
+          type: string
+        introduction:
+          type: string
+        created_at:
+          type: date
+        updated_at:
+          type: date
+        user:
+          type: string
+        guest:
+          type: string
+        jobDataEmployer:
+          type: string
+        cv:
+          type: string
+        required:
+          - user
+          - guest
+    ApplyJobStatistic:
+      type: "object"
+      properties:
+        key:
+          type: integer
+        title:
+          type: string
+        total:
+          type: integer
+    ApplyNote:
+      type: "object"
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        user_type:
+          type: integer
+        employer_id:
+          type: integer
+        meta_content:
+          type: string
+        created_at:
+          type: date
+        updated_at:
+          type: date
+    CandidateInfo:
+      type: "object"
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        user_type:
+          type: integer
+        employer_id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        meta_info:
+          type: string
+        created_at:
+          type: date
+        updated_at:
+          type: date
+

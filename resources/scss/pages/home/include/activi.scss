@@ -1,0 +1,71 @@
+.activity {
+    background: white;
+    padding: 10px;
+    height: 300px;
+    h3 {
+        text-transform: capitalize;
+        color: #666;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 5px;
+    }
+    .box {
+        margin-top: 5px !important;
+        .item {
+            border-left: 1px solid #f2f2f2;
+            position: relative;
+            margin-bottom: 5px;
+            .bg {
+                background-color: white;
+                position: absolute;
+                left: -5px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 25px;
+                border-radius: 50%;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                left: -2.6px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #2a477d;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+
+            padding-left: 10px;
+            .info {
+                a {
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                }
+                b {
+                    display: block;
+                }
+                span {
+                    color: #888;
+                    font-size: 13px;
+                }
+                p {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .activity {
+        display: none;
+    }
+}

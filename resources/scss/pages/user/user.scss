@@ -1,0 +1,15 @@
+@import "./../../bases/common";
+//Plugins
+//Components global
+@import "./../../bases/font-family";
+@import "./../../components/breadcrumb";
+@import "./../../components/header";
+@import "./../../components/menu_main";
+@import "./../../components/sidebar_mb";
+@import "./../../components/footer";
+//Include
+@import "./../../components/user";
+@import "~jquery-modal";
+@import "~toastr";
+@import "~line-awesome/dist/line-awesome/css/line-awesome.css";
+@import "./../../icon/font-awesome/scss/font-awesome";

@@ -1,0 +1,13 @@
+@import "./../../bases/common";
+//Plugins
+@import "~owl.carousel";
+//@import "~owl.carousel/dist/assets/owl.theme.default.css";
+@import "./../../customs/custom_owl";
+//Components global
+@import "./../../components/breadcrumb";
+@import "./../../components/header";
+@import "./../../components/menu_main";
+@import "./include/inc_detail";
+@import "./../../components/reviews";
+@import "./../../icon/font-awesome/scss/font-awesome";
+
