@@ -390,83 +390,12 @@
         <script src="{{  asset('admin/dist/js/demo.js') }}"></script>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-        <script src="//js.pusher.com/3.1/pusher.min.js"></script>
+        
 
-        <audio id="myAudio">
-            <source src="{{ asset('mp3/chuong.mp3') }}" type="audio/mpeg">
-        </audio>
+
         @yield('script')
 {{--        <!-- page script -->--}}
         <script type="text/javascript">
-{{--            @if (app()->environment() !== 'local')--}}
-				Pusher.logToConsole = true
-                var chuong = document.getElementById("myAudio");
-                var pusher = new Pusher('3c7ca79cb22c745bee4b', {
-                    encrypted: true,
-                    cluster: "ap1"
-                });
-
-                var channel = pusher.subscribe('NotificationRegisterEvent');
-                channel.bind('send-message', function(user) {
-                    if (typeof user !== "undefined") {
-                        let $countTotal = $("#notifications-count");
-                        let countTotal = $countTotal.text();
-                        $countTotal.text(parseInt(countTotal) + 1);
-                        let html = `<li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> Thành viên  <b>${user.name}</b> vừa đăng ký
-                                        </a>
-                                    </li>`
-
-                        $("#notifications-list").prepend(html);
-                        chuong.play();
-                    }
-                });
-
-                var channel2 = pusher.subscribe('NotificationQuickPurchaseEvent');
-                channel2.bind('notify-quick-purchase', function(data) {
-                    let $countTotal = $("#notifications-count");
-                    let countTotal = $countTotal.text();
-                    $countTotal.text(parseInt(countTotal) + 1);
-                    let html = `<li>
-                                        <a href="#">
-                                            <i class="fa fa-shopping-bag text-aqua"></i> ${data}
-                                        </a>
-                                    </li>`
-
-                    $("#notifications-list").prepend(html);
-                    chuong.play();
-                });
-                var channel3 = pusher.subscribe('NotificationDepositRequestEvent');
-                channel3.bind('notify-deposit-request', function(data) {
-                    let $countTotal = $("#notifications-count");
-                    let countTotal = $countTotal.text();
-                    $countTotal.text(parseInt(countTotal) + 1);
-                    let html = `<li>
-                                        <a href="#">
-                                            <i class="fa fa-dollar text-aqua"></i> ${data}
-                                        </a>
-                                    </li>`
-
-                    $("#notifications-list").prepend(html);
-                    chuong.play();
-                });
-
-                var channel4 = pusher.subscribe('NotificationBuySuccessEvent');
-                channel4.bind('notify-buy-success', function(data) {
-                    let $countTotal = $("#notifications-count");
-                    let countTotal = $countTotal.text();
-                    $countTotal.text(parseInt(countTotal) + 1);
-                    let html = `<li>
-                                        <a href="#">
-                                            <i class="fa fa-dollar text-aqua"></i> ${data}
-                                        </a>
-                                    </li>`
-
-                    $("#notifications-list").prepend(html);
-                    chuong.play();
-                });
-{{--            @endif--}}
 
             // To make Pace works on Ajax calls
             $(document).ajaxStart(function () {

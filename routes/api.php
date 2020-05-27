@@ -20,6 +20,7 @@ Route::group(['namespace' => 'Api','middleware' => ['cors']], function (){
 	Route::apiResource('menus', 'ApiMenuController');
 	Route::apiResource('articles', 'ApiArticleController');
 	Route::get('articles/menu/{menuID}','ApiArticleController@getArticleByMenuId');
+    Route::get('articles/relate/{menuID}','ApiArticleController@getArticleRelateByMenuId');
 });
 
 

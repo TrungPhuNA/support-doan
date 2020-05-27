@@ -21,13 +21,21 @@ class ApiArticleController extends Controller
 
     public function getArticleByMenuId(Request $request,$id)
 	{
-		\Log::info($request->all());
 		$articles = Article::with('menu')
 			->where('a_menu_id', $id)
 			->paginate(10);
 
 		return  $articles;
 	}
+
+    public function getArticleRelateByMenuId($id){
+        $articles = Article::with('menu')
+            ->where('a_menu_id', $id)
+            ->limit(6)
+            ->get();
+
+        return  $articles;
+    }
 
     /**
      * Store a newly created resource in storage.
