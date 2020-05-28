@@ -28,11 +28,7 @@ class MinifyHtml extends PageSpeed
             '/\s+</s'         => ' <',
 
         ];
-//		return $buffer;
 
-		if (\App::environment('local')){
-			return $buffer;
-		}
-        return $this->replace($replace, $buffer);
+		return $buffer;
     }
 }
