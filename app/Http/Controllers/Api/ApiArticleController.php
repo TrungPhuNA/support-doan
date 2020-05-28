@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Services\ProcessViewService;
 use Illuminate\Http\Request;
 
 class ApiArticleController extends Controller
@@ -56,6 +57,7 @@ class ApiArticleController extends Controller
      */
     public function show(Article $article)
     {
+		ProcessViewService::view('articles','a_view','article_'. $article->id,'$article->id');
 		return $article;
     }
 
