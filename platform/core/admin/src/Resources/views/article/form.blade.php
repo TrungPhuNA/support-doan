@@ -42,7 +42,7 @@
                     <select name="a_menu_id" class="form-control ">
                         <option value="">__Click__</option>
                         @foreach($menus as $menu)
-                            <option value="{{ $menu->id }}" {{ ($article->a_menu_id ?? 0 == $menu->id) ? "selected='selected'" : "" }}>
+                            <option value="{{ $menu->id }}" {{ ($article->a_menu_id ?? 0) == $menu->id ? "selected='selected'" : "" }}>
                                 {{  $menu->mn_name }}
                             </option>
                         @endforeach
