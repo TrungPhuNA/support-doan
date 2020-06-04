@@ -11,3 +11,6 @@
     
 ## install composer 
     - php -d memory_limit=-1 /usr/local/bin/composer require
+    
+##API
+    - php artisan make:controller Api/ApiContactController --api --model=Models/Contact

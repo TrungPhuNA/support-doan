@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Menu;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class ApiMenuController extends Controller
+class ApiContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,8 @@ class ApiMenuController extends Controller
      */
     public function index()
     {
-        return  Menu::with('children')
-			->where('mn_parent_id',0)
-			->get();
-
+        $contacts = Contact::all();
+        return  $contacts;
     }
 
     /**
@@ -29,28 +27,35 @@ class ApiMenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    	$data = $request->data;
+		\Log::info($data);
+    	return Contact::create([
+    		'c_name' => $data['name'],
+    		'c_email' => $data['email'],
+			'c_phone' => $data['phone'],
+			'c_content' => $data['content']
+		]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Menu  $menu
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
+    public function show(Contact $contact)
     {
-        return  $menu;
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Menu  $menu
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -58,11 +63,11 @@ class ApiMenuController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Menu  $menu
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Menu $menu)
+    public function destroy(Contact $contact)
     {
-
+		$contact->delete();
     }
 }

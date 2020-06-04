@@ -57,7 +57,7 @@ class ApiArticleController extends Controller
      */
     public function show(Article $article)
     {
-		ProcessViewService::view('articles','a_view','article_'. $article->id,'$article->id');
+		ProcessViewService::view('articles','a_view','article_'. $article->id,$article->id);
 		return $article;
     }
 
