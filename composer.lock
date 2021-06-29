@@ -413,7 +413,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/core/acl",
-                "reference": "66b4d1388920536a7c43071cdf06fac3007e78a4"
+                "reference": "f4d43d4377bd5e63cafce1605d196318cd61a3fa"
             },
             "type": "package",
             "extra": {
@@ -434,7 +434,10 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Alc Admin"
+            "description": "Alc Admin",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/admin",
@@ -442,7 +445,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/core/admin",
-                "reference": "d16122a680493904753b2e36f94758210e499c56"
+                "reference": "5caed067dd63dffa1a696bcc5e8921e3cd5d2482"
             },
             "type": "package",
             "extra": {
@@ -463,7 +466,10 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Core Admin"
+            "description": "Core Admin",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/blog",
@@ -471,7 +477,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/core/blog",
-                "reference": "99ba08e51be67c0c7d6f304286d0d6df9c025d4e"
+                "reference": "668e5a7e40d29ab074cff414f763cddb0ff5a225"
             },
             "type": "package",
             "extra": {
@@ -492,7 +498,10 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Blog system"
+            "description": "Blog system",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/meta-seo",
@@ -500,7 +509,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/core/meta-seo",
-                "reference": "9c94eae4d20434eac8896bfda0f9f81b2e6aeeba"
+                "reference": "db347f466582c2812a8a4dc49da45065cb16904d"
             },
             "type": "package",
             "extra": {
@@ -521,7 +530,10 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Setting Meta Seo"
+            "description": "Setting Meta Seo",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/test",
@@ -529,7 +541,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/core/test",
-                "reference": "be4a3da1b766b20bcfdb15f3ef6ec34fd5a9494c"
+                "reference": "49054022dba2bc50b72372ff5390f1a635574e03"
             },
             "type": "package",
             "extra": {
@@ -550,7 +562,10 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Test system"
+            "description": "Test system",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/user",
@@ -558,7 +573,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/core/user",
-                "reference": "89f7d9d59ee8c1b6964c5d2fd2c276e7b0d9c0ae"
+                "reference": "a9e0ba1ec5bc2fbf2ec2c7ca34216f0e1b81547e"
             },
             "type": "package",
             "extra": {
@@ -579,7 +594,10 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Setting User"
+            "description": "Setting User",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2051,31 +2069,31 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.69",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "7106f78428a344bc4f643c233a94e48795f10967"
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/7106f78428a344bc4f643c233a94e48795f10967",
-                "reference": "7106f78428a344bc4f643c233a94e48795f10967",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
                 "shasum": ""
             },
             "require": {
                 "ext-fileinfo": "*",
-                "php": ">=5.5.9"
+                "league/mime-type-detection": "^1.3",
+                "php": "^7.2.5 || ^8.0"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7.26"
+                "phpspec/prophecy": "^1.11.1",
+                "phpunit/phpunit": "^8.5.8"
             },
             "suggest": {
-                "ext-fileinfo": "Required for MimeType",
                 "ext-ftp": "Allows you to use FTP server storage",
                 "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
@@ -2131,7 +2149,73 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-05-18T15:13:39+00:00"
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem/issues",
+                "source": "https://github.com/thephpleague/flysystem/tree/1.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
+            ],
+            "time": "2021-06-23T21:56:05+00:00"
+        },
+        {
+            "name": "league/mime-type-detection",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/mime-type-detection.git",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpstan/phpstan": "^0.12.68",
+                "phpunit/phpunit": "^8.5.8 || ^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\MimeTypeDetection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frankdejonge.nl"
+                }
+            ],
+            "description": "Mime-type detection for Flysystem",
+            "support": {
+                "issues": "https://github.com/thephpleague/mime-type-detection/issues",
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-18T20:58:21+00:00"
         },
         {
             "name": "league/oauth1-client",
@@ -9137,5 +9221,6 @@
     "platform": {
         "php": "^7.2"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
