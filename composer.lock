@@ -409,11 +409,11 @@
         },
         {
             "name": "core/acl",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./platform/core/acl",
-                "reference": "66b4d1388920536a7c43071cdf06fac3007e78a4"
+                "reference": "f4d43d4377bd5e63cafce1605d196318cd61a3fa"
             },
             "type": "package",
             "extra": {
@@ -434,15 +434,18 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Alc Admin"
+            "description": "Alc Admin",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/admin",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./platform/core/admin",
-                "reference": "d16122a680493904753b2e36f94758210e499c56"
+                "reference": "5caed067dd63dffa1a696bcc5e8921e3cd5d2482"
             },
             "type": "package",
             "extra": {
@@ -463,15 +466,18 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Core Admin"
+            "description": "Core Admin",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/blog",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./platform/core/blog",
-                "reference": "99ba08e51be67c0c7d6f304286d0d6df9c025d4e"
+                "reference": "668e5a7e40d29ab074cff414f763cddb0ff5a225"
             },
             "type": "package",
             "extra": {
@@ -492,15 +498,18 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Blog system"
+            "description": "Blog system",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/meta-seo",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./platform/core/meta-seo",
-                "reference": "9c94eae4d20434eac8896bfda0f9f81b2e6aeeba"
+                "reference": "db347f466582c2812a8a4dc49da45065cb16904d"
             },
             "type": "package",
             "extra": {
@@ -521,15 +530,18 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Setting Meta Seo"
+            "description": "Setting Meta Seo",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/test",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./platform/core/test",
-                "reference": "be4a3da1b766b20bcfdb15f3ef6ec34fd5a9494c"
+                "reference": "49054022dba2bc50b72372ff5390f1a635574e03"
             },
             "type": "package",
             "extra": {
@@ -550,15 +562,18 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Test system"
+            "description": "Test system",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "core/user",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./platform/core/user",
-                "reference": "89f7d9d59ee8c1b6964c5d2fd2c276e7b0d9c0ae"
+                "reference": "a9e0ba1ec5bc2fbf2ec2c7ca34216f0e1b81547e"
             },
             "type": "package",
             "extra": {
@@ -579,7 +594,10 @@
                     "email": "phupt.humg.94@gmail.com"
                 }
             ],
-            "description": "Setting User"
+            "description": "Setting User",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1260,16 +1278,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.6.1",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
                 "shasum": ""
             },
             "require": {
@@ -1282,24 +1300,24 @@
             },
             "require-dev": {
                 "ext-zlib": "*",
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
             },
             "suggest": {
-                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1307,12 +1325,33 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -1327,7 +1366,25 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-07-01T23:21:34+00:00"
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/1.8.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-20T21:51:18+00:00"
         },
         {
             "name": "hashids/hashids",
@@ -3414,6 +3471,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -3675,6 +3735,10 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
@@ -9137,5 +9201,6 @@
     "platform": {
         "php": "^7.2"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
